@@ -1,0 +1,42 @@
+<mat-toolbar color="primary">
+  <div class="nav-container">
+    <div>
+      <button mat-icon-button class="example-icon" (click)="drawer.toggle()" aria-label="icon-button with menu icon">
+        <mat-icon>menu</mat-icon>
+      </button>
+      <span>maincas</span>
+    </div>
+    <div>
+      <button style="float: right;" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+      </mat-menu>
+    </div>
+  </div>
+</mat-toolbar>
+<mat-drawer-container class="example-container">
+  <mat-drawer #drawer mode="side" opened>
+    <mat-list role="list">
+      <mat-list-item role="listitem" routerLink="addData" routerLinkActive="active-link">Add form data</mat-list-item>
+      <mat-list-item role="listitem">Item 2</mat-list-item>
+      <mat-list-item role="listitem">Item 3</mat-list-item>
+      <mat-list-item role="listitem">Item 4</mat-list-item>
+    </mat-list>
+  </mat-drawer>
+  <mat-drawer-content>
+    <router-outlet></router-outlet>
+  </mat-drawer-content>
+</mat-drawer-container>
