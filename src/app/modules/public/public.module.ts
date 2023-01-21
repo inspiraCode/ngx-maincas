@@ -3,6 +3,9 @@ import { CommonModule } from '@angular/common';
 import { HomepageComponent } from './components/homepage/homepage.component';
 import { RouterModule, Routes } from '@angular/router';
 
+import { MatButtonModule } from '@angular/material/button';
+import { MatSidenavModule } from '@angular/material/sidenav';
+
 const routes: Routes = [
   {
     path: "",
@@ -10,14 +13,15 @@ const routes: Routes = [
   }
 ]
 
-
 @NgModule({
   declarations: [
     HomepageComponent
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    MatSidenavModule,
+    MatButtonModule
   ]
 })
 export class PublicModule { }
