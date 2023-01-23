@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { RouterModule, Routes } from '@angular/router';
 import { CompaniesComponent } from './companies/companies.component';
 import { HomeComponent } from './home/home.component';
+import { NewCompanyComponent } from './companies/new-company/new-company.component';
 
 const routes: Routes = [
   {
@@ -17,7 +18,16 @@ const routes: Routes = [
       },
       {
         path: "companies",
-        component: CompaniesComponent
+        children: [
+          {
+            path: "",
+            component: CompaniesComponent
+          },
+          {
+            path: "new",
+            component: NewCompanyComponent
+          }
+        ]
       }
     ]
   }
@@ -27,7 +37,8 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     HomeComponent,
-    CompaniesComponent
+    CompaniesComponent,
+    NewCompanyComponent
   ],
   imports: [
     CommonModule,
