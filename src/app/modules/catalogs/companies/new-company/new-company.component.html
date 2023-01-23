@@ -1,4 +1,5 @@
-<button mat-button routerLink="../../../">Tablero</button> > <button mat-button routerLink="../../">Catálogos</button> > <button mat-button routerLink="../">Compañías</button> > <button mat-button>Nuevo</button>
+<button mat-button routerLink="../../../">Tablero</button> > <button mat-button routerLink="../../">Catálogos</button> >
+<button mat-button routerLink="../">Compañías</button> > <button mat-button>Nuevo</button>
 <hr />
 <mat-card>
   <mat-card-content>
@@ -10,5 +11,54 @@
       <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="archive"></mat-icon>
       Guardar
     </button>
+  </mat-card-content>
+</mat-card>
+<br />
+<mat-card>
+  <mat-card-content>
+    <h1>Nueva Compañía</h1>
+    <br />
+    <form class="example-form">
+      <mat-form-field class="half-width" style="width:48%">
+        <mat-label>Alias</mat-label>
+        <input type="text" matInput  placeholder="Ex. Acme Tijuana">
+        <mat-hint>Nombre corto para encontrar compañía</mat-hint>
+      </mat-form-field>
+      <mat-form-field style="margin-left:8px;width:50%">
+        <mat-label>Nombre</mat-label>
+        <input type="text" matInput  placeholder="Ex. Acme S.A. de C.V.">
+        <mat-hint>Nombre legal y único de la compañía</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Domicilio - Calle y Num</mat-label>
+        <input type="text" matInput  placeholder="Domicilio">
+        <mat-hint>Calle y numero int/ext</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Domicilio - Colonia</mat-label>
+        <input type="text" matInput  placeholder="Colonia o apartado">
+        <mat-hint>Colonia o Apartado</mat-hint>
+      </mat-form-field>
+      <mat-form-field style="width:24%">
+        <mat-label>País</mat-label>
+        <input type="text" matInput  placeholder="País">
+        <mat-hint>País</mat-hint>
+      </mat-form-field>
+      <mat-form-field style="margin-left:8px;width:24%">
+        <mat-label>Ciudad</mat-label>
+        <input type="text" matInput  placeholder="Ciudad">
+        <mat-hint>Ciudad</mat-hint>
+      </mat-form-field>
+      <mat-form-field style="margin-left:8px;width:24%">
+        <mat-label>Estado</mat-label>
+        <input type="text" matInput  placeholder="Estado">
+        <mat-hint>Estado</mat-hint>
+      </mat-form-field>
+      <mat-form-field style="margin-left:8px;width:24%">
+        <mat-label>C. Postal</mat-label>
+        <input type="text" matInput  placeholder="C. Postal">
+        <mat-hint>C. Postal</mat-hint>
+      </mat-form-field>
+    </form>
   </mat-card-content>
 </mat-card>

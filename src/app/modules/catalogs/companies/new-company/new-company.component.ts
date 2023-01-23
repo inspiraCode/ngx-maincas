@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./new-company.component.sass']
 })
 export class NewCompanyComponent {
-
+  
 }
