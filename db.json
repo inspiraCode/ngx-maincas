@@ -1,0 +1,93 @@
+{
+  "companies": [
+    {
+      "companyId": 1,
+      "companyAlias": "LEAR Juarez Planta 1",
+      "companyName": "LEAR de Juarez SA de CV",
+      "companyAddressLineOne": "Ave. Industrial 501 - Edif. 4",
+      "companyAddressLineTwo": "Parque Ind. Omega",
+      "companyAddressCountry": "MEX",
+      "companyAddressCity": "Ciudad Juarez",
+      "companyAddressState": "Chihuahua",
+      "companyAddressZip": "32115",
+      "companyRoles": "SHIPPER,CONSIGNEE,CUSTOMER"
+    },
+    {
+      "companyId": 2,
+      "companyAlias": "LEAR Juarez Planta 2",
+      "companyName": "LEAR de Juarez SA de CV",
+      "companyAddressLineOne": "Ave. Industrial 501 - Edif. 2",
+      "companyAddressLineTwo": "Parque Ind. Omega",
+      "companyAddressCountry": "MEX",
+      "companyAddressCity": "Ciudad Juarez",
+      "companyAddressState": "Chihuahua",
+      "companyAddressZip": "32115",
+      "companyRoles": "SHIPPER,CONSIGNEE,CUSTOMER"
+    },
+    {
+      "companyId": 3,
+      "companyAlias": "Componentes Industriales de la frontera",
+      "companyName": "Componentes Industriales de la frontera SA de CV",
+      "companyAddressLineOne": "Ave. Panamericana 3315",
+      "companyAddressLineTwo": "Col. Fidel Velazquez",
+      "companyAddressCountry": "MEX",
+      "companyAddressCity": "Chihuahua",
+      "companyAddressState": "Chihuahua",
+      "companyAddressZip": "30510",
+      "companyRoles": "SHIPPER,CONSIGNEE"
+    },
+    {
+      "companyId": 4,
+      "companyAlias": "Fletes del Norte",
+      "companyName": "Fletes del Norte SA de CV",
+      "companyAddressLineOne": "Ave. 16 de Septiembre 5543",
+      "companyAddressLineTwo": "Col. Centro",
+      "companyAddressCountry": "MEX",
+      "companyAddressCity": "Torreon",
+      "companyAddressState": "Coahuila",
+      "companyAddressZip": "29428",
+      "companyRoles": "CARRIER"
+    },
+    {
+      "companyId": 5,
+      "companyAlias": "Soluciones de Transporte",
+      "companyName": "SOLTRA SA DE CV",
+      "companyAddressLineOne": "Ave. del charro",
+      "companyAddressLineTwo": "Col. Rotario",
+      "companyAddressCountry": "MEX",
+      "companyAddressCity": "Torreon",
+      "companyAddressState": "Coahuila",
+      "companyAddressZip": "29318",
+      "companyRoles": "BROKER,CARRIER"
+    },
+    {
+      "companyId": 6,
+      "companyAlias": "Importaciones del norte",
+      "companyName": "Importaciones del Norte SA DE CV",
+      "companyAddressLineOne": "Ave. de las Torres",
+      "companyAddressLineTwo": "Col. El Granjero",
+      "companyAddressCountry": "MEX",
+      "companyAddressCity": "Ciudad Juarez",
+      "companyAddressState": "Chihuahua",
+      "companyAddressZip": "33218",
+      "companyRoles": "CUSTOMS,BROKER"
+    }
+  ],
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
