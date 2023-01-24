@@ -28,3 +28,7 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 Check the angular material components: [Material Angular](https://material.angular.io/components/autocomplete/overview)
 Angular material icons: [Angular Material Icons List](https://klarsys.github.io/angular-material-icons/)
+
+## JSON Server
+run using: `json-server --watch db.json`, install globally by: `npm install json-server`.
+data is available at `db.json`
