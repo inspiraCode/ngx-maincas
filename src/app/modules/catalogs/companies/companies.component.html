@@ -24,6 +24,22 @@
     <div class="mat-elevation-z8">
       <table mat-table [dataSource]="dataSource" matSort>
 
+        <!-- Actions Column -->
+        <ng-container matColumnDef="actions">
+          <th mat-header-cell *matHeaderCellDef mat-sort-header> Opciones </th>
+          <td mat-cell *matCellDef="let row">
+            <button mat-icon-button color="primary">
+              <mat-icon>edit</mat-icon>
+            </button>
+            <button mat-icon-button color="warn">
+              <mat-icon>delete</mat-icon>
+            </button>
+            <button mat-icon-button color="accent">
+              <mat-icon>lock</mat-icon>
+            </button>
+          </td>
+        </ng-container>
+
         <!-- Name Column -->
         <ng-container matColumnDef="name">
           <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>

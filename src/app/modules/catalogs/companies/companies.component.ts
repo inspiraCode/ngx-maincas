@@ -10,7 +10,7 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./companies.component.sass']
 })
 export class CompaniesComponent implements OnInit {
-  displayedColumns: string[] = ['name', 'alias', 'addressCountry', 'addressState', 'addressCity', 'roles'];
+  displayedColumns: string[] = ['actions', 'name', 'alias', 'addressCountry', 'addressState', 'addressCity', 'roles'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
