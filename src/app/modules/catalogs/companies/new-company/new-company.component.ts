@@ -13,7 +13,11 @@ export class NewCompanyComponent {
   companyForm !: FormGroup;
   rolesList: string[] = ['AUDITOR', 'BROKER', 'CARRIER', 'CONSIGNEE', 'CONSULTANT', 'CUSTOMER', 'PAYER', 'SHIPPER'];
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private api: ApiService, private notifyService: NotificationService) { }
+  constructor(
+    private formBuilder: FormBuilder,
+    private router: Router,
+    private api: ApiService,
+    private notifyService: NotificationService) { }
 
   ngOnInit(): void {
     this.companyForm = this.formBuilder.group({
@@ -25,7 +29,8 @@ export class NewCompanyComponent {
       addressCity: [''],
       addressState: [''],
       addressZip: [''],
-      roles: ['']
+      roles: [''],
+      block: [false]
     });
   }
 

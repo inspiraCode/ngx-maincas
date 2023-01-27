@@ -64,7 +64,11 @@
         <mat-select formControlName="roles" multiple>
           <mat-option *ngFor="let role of rolesList" [value]="role">{{role}}</mat-option>
         </mat-select>
+        <mat-hint>Roles, Facultades o tipo de compañía</mat-hint>
       </mat-form-field>
+      <section class="checkbox-section">
+        <mat-checkbox formControlName="block" color="warn">Bloqueo</mat-checkbox>
+      </section>
     </form>
   </mat-card-content>
 </mat-card>

@@ -31,7 +31,8 @@ export class EditCompanyComponent {
       addressCity: [''],
       addressState: [''],
       addressZip: [''],
-      roles: ['']
+      roles: [''],
+      block: [false]
     });
     this.api.getCompanyById(Number(this.route.snapshot.paramMap.get('id')))
       .subscribe({
@@ -49,7 +50,8 @@ export class EditCompanyComponent {
             addressCity: [response.addressCity],
             addressState: [response.addressState],
             addressZip: [response.addressZip],
-            roles: [roles]
+            roles: [roles],
+            block: [response.block]
           });
         },
         error: (errData) => {

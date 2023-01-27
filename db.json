@@ -10,7 +10,8 @@
       "addressCity": "Ciudad Juarez",
       "addressState": "Chihuahua",
       "addressZip": "32115",
-      "roles": "SHIPPER,CONSIGNEE,CUSTOMER"
+      "roles": "SHIPPER,CONSIGNEE,CUSTOMER",
+      "block": false
     },
     {
       "id": 2,
@@ -22,7 +23,8 @@
       "addressCity": "Ciudad Juarez",
       "addressState": "Chihuahua",
       "addressZip": "32115",
-      "roles": "SHIPPER,CONSIGNEE,CUSTOMER"
+      "roles": "SHIPPER,CONSIGNEE,CUSTOMER",
+      "block": true
     },
     {
       "id": 3,
@@ -34,7 +36,8 @@
       "addressCity": "Chihuahua",
       "addressState": "Chihuahua",
       "addressZip": "30510",
-      "roles": "SHIPPER,CONSIGNEE"
+      "roles": "SHIPPER,CONSIGNEE",
+      "block": false
     },
     {
       "alias": "Fletes del Norte",
@@ -46,10 +49,10 @@
       "addressState": "Coahuila",
       "addressZip": "29428",
       "roles": "CARRIER",
-      "id": 4
+      "id": 4,
+      "block": false
     },
     {
-      "id": 5,
       "alias": "Soluciones de Transporte",
       "name": "SOLTRA SA DE CV",
       "addressLineOne": "Ave. del charro",
@@ -58,7 +61,9 @@
       "addressCity": "Torreon",
       "addressState": "Coahuila",
       "addressZip": "29318",
-      "roles": "BROKER,CARRIER"
+      "roles": "BROKER,CARRIER",
+      "block": false,
+      "id": 5
     },
     {
       "id": 6,
@@ -70,7 +75,8 @@
       "addressCity": "Ciudad Juarez",
       "addressState": "Chihuahua",
       "addressZip": "33218",
-      "roles": "CUSTOMS,BROKER"
+      "roles": "CUSTOMS,BROKER",
+      "block": false
     },
     {
       "alias": "International Freights",
@@ -81,7 +87,8 @@
       "addressCity": "El Paso",
       "addressState": "TX",
       "addressZip": "79915",
-      "id": 7
+      "id": 7,
+      "block": false
     },
     {
       "alias": "ACME Tijuana",
@@ -92,7 +99,8 @@
       "addressCity": "Coronango",
       "addressState": "Puebla",
       "addressZip": "72680",
-      "id": 8
+      "id": 8,
+      "block": false
     },
     {
       "alias": "ESPEJOS CLAROS",
@@ -104,7 +112,8 @@
       "addressState": "ESTADO DE MEXICO",
       "addressZip": "10035",
       "roles": "CONSIGNEE,CUSTOMER,PAYER,SHIPPER",
-      "id": 9
+      "id": 9,
+      "block": false
     },
     {
       "alias": "Navajo Products",
@@ -116,7 +125,8 @@
       "addressState": "NM",
       "addressZip": "79425",
       "roles": "CONSIGNEE,CUSTOMER,SHIPPER",
-      "id": 10
+      "id": 10,
+      "block": false
     },
     {
       "alias": "EPSON MEXICO",
@@ -128,7 +138,21 @@
       "addressState": "Tamaulipas",
       "addressZip": "43225",
       "roles": "CONSULTANT,CUSTOMER,PAYER,SHIPPER",
-      "id": 11
+      "id": 11,
+      "block": false
+    },
+    {
+      "alias": "CASIO MEXICO",
+      "name": "Electronicos CASIO SA de CV",
+      "addressLineOne": "AVE. BENITO JUAREZ 410",
+      "addressLineTwo": "COL. GALEANA",
+      "addressCountry": "MEXICO",
+      "addressCity": "XALAPA",
+      "addressState": "VERACRUZ",
+      "addressZip": "25428",
+      "roles": "CONSIGNEE,CUSTOMER,SHIPPER",
+      "block": true,
+      "id": 12
     }
   ],
   "posts": [
