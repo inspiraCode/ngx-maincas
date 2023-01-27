@@ -7,6 +7,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatSelectModule } from '@angular/material/select';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
 import { RouterModule, Routes } from '@angular/router';
@@ -31,6 +32,10 @@ const routes: Routes = [
           },
           {
             path: "new",
+            component: NewCompanyComponent
+          },
+          {
+            path: "edit/{id}",
             component: NewCompanyComponent
           }
         ]
@@ -58,7 +63,8 @@ const routes: Routes = [
     FormsModule,
     MatTableModule,
     MatPaginatorModule,
-    MatSortModule
+    MatSortModule,
+    MatSelectModule
   ]
 })
 export class CatalogsModule { }

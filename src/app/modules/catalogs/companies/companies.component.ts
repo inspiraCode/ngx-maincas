@@ -1,8 +1,10 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
-import { ApiService } from './services/api.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { ApiService } from './services/api.service';
+
+import { NotificationService } from 'src/app/notification.service';
 
 @Component({
   selector: 'app-companies',
@@ -10,13 +12,14 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./companies.component.sass']
 })
 export class CompaniesComponent implements OnInit {
+  title = 'toaster-not';
   displayedColumns: string[] = ['actions', 'name', 'alias', 'addressCountry', 'addressState', 'addressCity', 'roles'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private api: ApiService) {
+  constructor(private api: ApiService, private notifyService: NotificationService) {
   }
 
   ngOnInit(): void {
@@ -33,7 +36,7 @@ export class CompaniesComponent implements OnInit {
       },
       error: (errData) => {
         console.error(errData);
-        alert("Error técnico al cargar datos, intente de nuevo")
+        this.notifyService.showError("Error técnico", "Error al cargar datos, intente de nuevo");
       }
     });
   }

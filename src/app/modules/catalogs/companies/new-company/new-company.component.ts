@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { NotificationService } from 'src/app/notification.service';
 import { ApiService } from '../services/api.service';
 
 @Component({
@@ -10,8 +11,9 @@ import { ApiService } from '../services/api.service';
 })
 export class NewCompanyComponent {
   companyForm !: FormGroup;
+  rolesList: string[] = ['AUDITOR', 'BROKER', 'CARRIER', 'CONSIGNEE', 'CONSULTANT', 'CUSTOMER', 'PAYER', 'SHIPPER'];
 
-  constructor(private formBuilder: FormBuilder, private router: Router, private api: ApiService) { }
+  constructor(private formBuilder: FormBuilder, private router: Router, private api: ApiService, private notifyService: NotificationService) { }
 
   ngOnInit(): void {
     this.companyForm = this.formBuilder.group({
@@ -22,7 +24,8 @@ export class NewCompanyComponent {
       addressCountry: [''],
       addressCity: [''],
       addressState: [''],
-      addressZip: ['']
+      addressZip: [''],
+      roles: ['']
     });
   }
 
@@ -30,16 +33,16 @@ export class NewCompanyComponent {
     if (this.companyForm.valid) {
       this.api.postCompany(this.companyForm.value).subscribe({
         next: (res) => {
-          alert("Compañía agregada con éxito");
+          this.notifyService.showSuccess("Compañía Agregada", "Una compañía ha sido agregada con éxito");
           this.router.navigateByUrl('/dashboard/catalogs/companies');
         },
         error: (errData) => {
           console.error(errData);
-          alert("Error técnico al cargar datos, intente de nuevo");
+          this.notifyService.showError("Error Técnico", "Error técnico al cargar datos, intente de nuevo");
         }
       });
     } else {
-      alert("Valide los valores ingresados.");
+      this.notifyService.showWarning("Validación", "Los datos ingresados no son válidos para el sistema");
       console.error("Not a valid form");
     }
   }

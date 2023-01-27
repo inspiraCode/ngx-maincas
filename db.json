@@ -93,6 +93,39 @@
       "addressState": "Puebla",
       "addressZip": "72680",
       "id": 8
+    },
+    {
+      "alias": "ESPEJOS CLAROS",
+      "name": "ESPEJOS CLAROS SA DE CV",
+      "addressLineOne": "CALLE CAMINO NACIONAL 4325-15",
+      "addressLineTwo": "COL. PARTIDO ROMERO",
+      "addressCountry": "MEXICO",
+      "addressCity": "CIUDAD DE MEXICO",
+      "addressState": "ESTADO DE MEXICO",
+      "addressZip": "10035",
+      "roles": [
+        "CONSIGNEE",
+        "CUSTOMER",
+        "PAYER",
+        "SHIPPER"
+      ],
+      "id": 9
+    },
+    {
+      "alias": "Navajo Products",
+      "name": "Navajo Products LLC",
+      "addressLineOne": "456 main st",
+      "addressLineTwo": "",
+      "addressCountry": "United States",
+      "addressCity": "Alamogordo",
+      "addressState": "NM",
+      "addressZip": "79425",
+      "roles": [
+        "CONSIGNEE",
+        "CUSTOMER",
+        "SHIPPER"
+      ],
+      "id": 10
     }
   ],
   "posts": [
