@@ -37,7 +37,6 @@
       "roles": "SHIPPER,CONSIGNEE"
     },
     {
-      "id": 4,
       "alias": "Fletes del Norte",
       "name": "Fletes del Norte SA de CV",
       "addressLineOne": "Ave. 16 de Septiembre 5543",
@@ -46,7 +45,8 @@
       "addressCity": "Torreon",
       "addressState": "Coahuila",
       "addressZip": "29428",
-      "roles": "CARRIER"
+      "roles": "CARRIER",
+      "id": 4
     },
     {
       "id": 5,
@@ -103,12 +103,7 @@
       "addressCity": "CIUDAD DE MEXICO",
       "addressState": "ESTADO DE MEXICO",
       "addressZip": "10035",
-      "roles": [
-        "CONSIGNEE",
-        "CUSTOMER",
-        "PAYER",
-        "SHIPPER"
-      ],
+      "roles": "CONSIGNEE,CUSTOMER,PAYER,SHIPPER",
       "id": 9
     },
     {
@@ -120,12 +115,20 @@
       "addressCity": "Alamogordo",
       "addressState": "NM",
       "addressZip": "79425",
-      "roles": [
-        "CONSIGNEE",
-        "CUSTOMER",
-        "SHIPPER"
-      ],
+      "roles": "CONSIGNEE,CUSTOMER,SHIPPER",
       "id": 10
+    },
+    {
+      "alias": "EPSON MEXICO",
+      "name": "Equipos EPSON SA de CV",
+      "addressLineOne": "Ave. Montes Urales #3345 Edif A.",
+      "addressLineTwo": "Col. America Libre",
+      "addressCountry": "Mexico",
+      "addressCity": "Matamoros",
+      "addressState": "Tamaulipas",
+      "addressZip": "43225",
+      "roles": "CONSULTANT,CUSTOMER,PAYER,SHIPPER",
+      "id": 11
     }
   ],
   "posts": [

@@ -14,6 +14,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { CompaniesComponent } from './companies/companies.component';
 import { NewCompanyComponent } from './companies/new-company/new-company.component';
 import { HomeComponent } from './home/home.component';
+import { EditCompanyComponent } from './companies/edit-company/edit-company.component';
 
 const routes: Routes = [
   {
@@ -35,8 +36,8 @@ const routes: Routes = [
             component: NewCompanyComponent
           },
           {
-            path: "edit/{id}",
-            component: NewCompanyComponent
+            path: "edit/:id",
+            component: EditCompanyComponent
           }
         ]
       }
@@ -49,7 +50,8 @@ const routes: Routes = [
   declarations: [
     HomeComponent,
     CompaniesComponent,
-    NewCompanyComponent
+    NewCompanyComponent,
+    EditCompanyComponent
   ],
   imports: [
     CommonModule,

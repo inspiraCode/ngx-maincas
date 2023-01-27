@@ -9,10 +9,20 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   postCompany(data: any) {
+    data.roles = data.roles.toString();
     return this.http.post<any>("http://localhost:3000/companies/", data);
   }
 
-  getCompany() { 
+  updateCompany(id: Number, data: any) {
+    data.roles = data.roles.toString();
+    return this.http.put<any>("http://localhost:3000/companies/" + id, data);
+  }
+
+  getCompany() {
     return this.http.get<any>("http://localhost:3000/companies/");
+  }
+
+  getCompanyById(id: Number) {
+    return this.http.get<any>("http://localhost:3000/companies/" + id);
   }
 }
