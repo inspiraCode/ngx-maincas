@@ -1,10 +1,12 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
 import { ApiService } from './services/api.service';
 
 import { NotificationService } from 'src/app/notification.service';
+import { DeleteCompanyDialogComponent } from './delete-company-dialog/delete-company-dialog.component';
 
 @Component({
   selector: 'app-companies',
@@ -19,11 +21,29 @@ export class CompaniesComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   @ViewChild(MatSort) sort!: MatSort;
 
-  constructor(private api: ApiService, private notifyService: NotificationService) {
-  }
+  constructor(
+    private api: ApiService,
+    private notifyService: NotificationService,
+    public dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getAllCompanies();
+  }
+
+  openDeleteDialog(row: any) {
+    const dialogRef = this.dialog.open(DeleteCompanyDialogComponent, {
+      width: '30%',
+      data: row
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (result.result === 'deleted') {
+        this.notifyService.showSuccess("Compañía borrada", "La compañía ha sido borrada con éxito.")
+      } else {
+        this.notifyService.showError("Error técnico", "No se pudo borrar la compañía seleccionada");
+      }
+      this.getAllCompanies();
+    });
   }
 
   getAllCompanies() {

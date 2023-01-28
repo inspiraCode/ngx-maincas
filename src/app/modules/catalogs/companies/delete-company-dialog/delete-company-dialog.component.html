@@ -1,0 +1,19 @@
+<h2 mat-dialog-title>Borrar Compañía</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>Para tomar en cuenta</h3>
+  <p>No se pueden borrar compañías que se encuentran en uso, realice cambios a la compañía o desactive
+    su uso en vez de borrarla.</p>
+
+  <h3>Confirmación</h3>
+  <p>Para borrar la compañía deberá escribir su nombre a continuación, y finalmente pulsar el botón de borrar abajo.</p>
+
+  <mat-form-field style="margin-left:8px;width:80%">
+    <mat-label>Nombre de la compañía</mat-label>
+    <input [(ngModel)]="confirmText" type="text" matInput placeholder="Confirmar nombre" cdkFocusInitial />
+    <mat-hint>{{deleteRowCompanyName}}</mat-hint>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button color="warn" (click)="deleteRow()" [disabled]="confirmText!=deleteRowCompanyName">Borrar</button>
+</mat-dialog-actions>
