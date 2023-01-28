@@ -7,6 +7,7 @@ import { ApiService } from './services/api.service';
 
 import { NotificationService } from 'src/app/notification.service';
 import { DeleteCompanyDialogComponent } from './delete-company-dialog/delete-company-dialog.component';
+import { BlockCompanyDialogComponent } from './block-company-dialog/block-company-dialog.component';
 
 @Component({
   selector: 'app-companies',
@@ -37,12 +38,30 @@ export class CompaniesComponent implements OnInit {
     });
 
     dialogRef.afterClosed().subscribe(result => {
+      if (!result) return;
       if (result.result === 'deleted') {
-        this.notifyService.showSuccess("Compañía borrada", "La compañía ha sido borrada con éxito.")
+        this.notifyService.showSuccess("Compañía borrada", "La compañía ha sido borrada con éxito.");
+        this.getAllCompanies();
       } else {
         this.notifyService.showError("Error técnico", "No se pudo borrar la compañía seleccionada");
       }
-      this.getAllCompanies();
+    });
+  }
+
+  openBlockDialog(row: any) {
+    const dialogRef = this.dialog.open(BlockCompanyDialogComponent, {
+      width: '30%',
+      data: row
+    });
+
+    dialogRef.afterClosed().subscribe(result => {
+      if (!result) return;
+      if (result.result === 'blocked') {
+        this.notifyService.showSuccess("Bloque de Compañía", "La propiedad de bloqueo de la compañía ha sido modificado.");
+        this.getAllCompanies();
+      } else {
+        this.notifyService.showError("Error técnico", "No se pudo cambiar el bloqueo de la compañía, intente nuevamente.");
+      }
     });
   }
 

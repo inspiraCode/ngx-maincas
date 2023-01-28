@@ -18,6 +18,7 @@ import { DeleteCompanyDialogComponent } from './companies/delete-company-dialog/
 import { EditCompanyComponent } from './companies/edit-company/edit-company.component';
 import { NewCompanyComponent } from './companies/new-company/new-company.component';
 import { HomeComponent } from './home/home.component';
+import { BlockCompanyDialogComponent } from './companies/block-company-dialog/block-company-dialog.component';
 
 const routes: Routes = [
   {
@@ -55,7 +56,8 @@ const routes: Routes = [
     CompaniesComponent,
     NewCompanyComponent,
     EditCompanyComponent,
-    DeleteCompanyDialogComponent
+    DeleteCompanyDialogComponent,
+    BlockCompanyDialogComponent
   ],
   imports: [
     CommonModule,

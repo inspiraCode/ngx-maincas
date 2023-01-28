@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>Bloquear Compañía</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>Para tomar en cuenta</h3>
+  <p>Al bloquear una compañía, ésta no podrá ser seleccionada en las diferentes operaciones y catálogos, sin embargo, todos los lugares donde ya ha sido utilizada no sufrirán cambios.</p>
+
+  <h3>Confirmación</h3>
+  <p>Para bloquear la compañía deberá escribir su nombre a continuación, y finalmente pulsar el botón de cambiar bloqueo abajo.</p>
+
+  <mat-form-field style="margin-left:8px;width:80%">
+    <mat-label>Nombre de la compañía</mat-label>
+    <input [(ngModel)]="confirmText" type="text" matInput placeholder="Confirmar nombre" cdkFocusInitial />
+    <mat-hint>{{rowCompanyName}}</mat-hint>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button color="accent" (click)="blockRow()" [disabled]="confirmText!=rowCompanyName">Cambiar Bloqueo</button>
+</mat-dialog-actions>

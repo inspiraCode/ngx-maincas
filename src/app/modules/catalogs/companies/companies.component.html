@@ -34,10 +34,10 @@
             <button (click)="openDeleteDialog(row)" mat-icon-button color="warn">
               <mat-icon>delete</mat-icon>
             </button>
-            <button *ngIf=!row.block mat-icon-button color="warn">
+            <button *ngIf=row.block (click)="openBlockDialog(row)" mat-icon-button color="warn">
               <mat-icon>lock</mat-icon>
             </button>
-            <button *ngIf=row.block mat-icon-button color="accent">
+            <button *ngIf=!row.block (click)="openBlockDialog(row)" mat-icon-button color="accent">
               <mat-icon>lock_open</mat-icon>
             </button>
           </td>
