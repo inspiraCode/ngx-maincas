@@ -18,7 +18,8 @@
      inkscape:groupmode="layer"
      id="layer1"
      transform="translate(-1.563745,-2.63812)"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:inline">
     <rect
        style="opacity:0.6;fill:#ac9d93;stroke:#1a1a1a;stroke-width:0.264583"
        id="rect111"
@@ -602,7 +603,8 @@
      id="layer2"
      inkscape:label="Layer 2"
      transform="translate(-1.563745,-2.63812)"
-     sodipodi:insensitive="true">
+     sodipodi:insensitive="true"
+     style="display:inline">
     <text
        xml:space="preserve"
        style="font-style:normal;font-weight:normal;font-size:4.37282px;line-height:1.25;font-family:sans-serif;fill:#ff2a2a;fill-opacity:1;stroke:none;stroke-width:0.109321"
@@ -1561,7 +1563,7 @@
      sodipodi:insensitive="true">
     <a
        id="a25964"
-       xlink:href="/dashboard/process/work_orders"
+       xlink:href="/dashboard/process/work-orders"
        style="opacity:0.02;fill:#800000">
       <rect
          style="opacity:0.6;fill:#800000;fill-opacity:0.983903;stroke:#1a1a1a;stroke-width:0.349689;stroke-dasharray:none;stroke-dashoffset:0"
@@ -1584,7 +1586,7 @@
     </a>
     <a
        id="a27147-7"
-       xlink:href="/dashboard/process/monetary_charges"
+       xlink:href="/dashboard/process/monetary-charges"
        style="display:inline;fill:#800000"
        transform="matrix(0.99250212,0,0,0.5326629,81.309835,16.394933)">
       <rect
@@ -1610,7 +1612,7 @@
     </a>
     <a
        id="a27147-7-8"
-       xlink:href="/dashboard/process/monetary_charges/documents"
+       xlink:href="/dashboard/process/monetary-charges/documents"
        style="display:inline;fill:#800000"
        transform="matrix(0.87277434,0,0,0.60383307,92.871032,26.544664)">
       <rect
@@ -1623,7 +1625,7 @@
     </a>
     <a
        id="a27147-7-8-9"
-       xlink:href="/dashboard/process/monetary_charges/operations"
+       xlink:href="/dashboard/process/monetary-charges/operations"
        style="display:inline;fill:#800000"
        transform="matrix(0.87277434,0,0,0.60383307,92.692443,37.815195)">
       <rect
@@ -1636,7 +1638,7 @@
     </a>
     <a
        id="a27147-7-8-9-6"
-       xlink:href="/dashboard/process/monetary_charges/quotes"
+       xlink:href="/dashboard/process/monetary-charges/quotes"
        style="display:inline;fill:#800000"
        transform="matrix(0.87277434,0,0,0.60383307,92.68789,47.955128)">
       <rect
@@ -1701,7 +1703,7 @@
     </a>
     <a
        id="a27147-0-6-9-6-3"
-       xlink:href="/dashboard/process/cross_transport"
+       xlink:href="/dashboard/process/cross-transport"
        style="display:inline;fill:#800000"
        transform="matrix(1.063267,0,0,0.65892241,-79.517445,109.16239)">
       <rect
@@ -1714,7 +1716,7 @@
     </a>
     <a
        id="a27147-0-6-9-6-3-1"
-       xlink:href="/dashboard/process/logistic_exit"
+       xlink:href="/dashboard/process/logistic-exit"
        style="display:inline;fill:#800000"
        transform="matrix(1.063267,0,0,0.65892241,-79.672573,124.39753)">
       <rect
@@ -1791,8 +1793,21 @@
          y="28.735544" />
     </a>
     <a
+       id="a27147-0-6-9-6-3-1-1-0-5-7-4-3"
+       xlink:href="/dashboard/process/deposits"
+       style="display:inline;fill:#800000"
+       transform="matrix(1.1621068,0,0,0.90219506,65.693464,201.10293)">
+      <rect
+         style="opacity:0.02;fill:#ffffff;fill-opacity:0.983903;stroke:#1a1a1a;stroke-width:0.349999;stroke-dasharray:none;stroke-dashoffset:0"
+         id="rect27144-5-6-8-1-2-5-4-7-8-0-8-6"
+         width="41.693645"
+         height="11.125895"
+         x="77.545013"
+         y="28.735544" />
+    </a>
+    <a
        id="a27147-0-6-9-6-3-1-1-9"
-       xlink:href="/dashboard/process/pre_departure"
+       xlink:href="/dashboard/process/pre-departure"
        style="display:inline;fill:#800000"
        transform="matrix(1.1485838,0,0,0.99237379,-12.357983,124.98268)">
       <rect
@@ -1805,7 +1820,7 @@
     </a>
     <a
        id="a27147-0-6-9-6-3-1-1-9-0"
-       xlink:href="/dashboard/process/customs_clearance"
+       xlink:href="/dashboard/process/customs-clearance"
        style="display:inline;fill:#800000"
        transform="matrix(1.4526486,0,0,0.98825757,-41.348736,149.65815)">
       <rect
@@ -1818,7 +1833,7 @@
     </a>
     <a
        id="a27147-0-6-9-6-3-1-9"
-       xlink:href="/dashboard/process/final_transport"
+       xlink:href="/dashboard/process/final-transport"
        style="display:inline;fill:#800000"
        transform="matrix(1.0812155,0,0,0.65870365,-81.724442,139.55651)">
       <rect
@@ -1831,7 +1846,7 @@
     </a>
     <a
        id="a27147-0-6-9-6-3-1-9-2"
-       xlink:href="/dashboard/process/final_transport"
+       xlink:href="/dashboard/process/final-transport"
        style="display:inline;fill:#800000"
        transform="matrix(1.3646059,0,0,0.96485487,-33.152095,175.38026)">
       <rect
@@ -1844,7 +1859,7 @@
     </a>
     <a
        id="a27147-0-6-9-6-3-1-9-2-6"
-       xlink:href="/dashboard/process/legal_api"
+       xlink:href="/dashboard/process/legal-api"
        style="display:inline;fill:#800000"
        transform="matrix(1.0707969,0,0,1.0205903,-80.721752,149.94341)">
       <rect
@@ -1870,7 +1885,7 @@
     </a>
     <a
        id="a27147-0-6-4"
-       xlink:href="/dashboard/process/transit_docs"
+       xlink:href="/dashboard/process/transit-docs"
        style="display:inline;fill:#800000"
        transform="matrix(1.073609,0,0,0.53542257,-80.710675,48.732405)">
       <rect
@@ -1883,7 +1898,7 @@
     </a>
     <a
        id="a27147-0-6-4-0"
-       xlink:href="/dashboard/process/transit_docs/purchase_orders"
+       xlink:href="/dashboard/process/transit-docs/purchase-orders"
        style="display:inline;fill:#800000"
        transform="matrix(0.95385046,0,0,0.56419994,-69.099892,60.433958)">
       <rect
@@ -1896,7 +1911,7 @@
     </a>
     <a
        id="a27147-0-6-4-0-6"
-       xlink:href="/dashboard/process/transit_docs/supply_orders"
+       xlink:href="/dashboard/process/transit-docs/supply-orders"
        style="display:inline;fill:#800000"
        transform="matrix(0.95385046,0,0,0.56419994,-69.201366,72.566484)">
       <rect
@@ -1909,7 +1924,7 @@
     </a>
     <a
        id="a27147-0-6-4-0-6-6"
-       xlink:href="/dashboard/process/transit_docs/invoices"
+       xlink:href="/dashboard/process/transit-docs/invoices"
        style="display:inline;fill:#800000"
        transform="matrix(0.95385046,0,0,0.56419994,-69.413356,84.518658)">
       <rect
@@ -1922,7 +1937,7 @@
     </a>
     <a
        id="a27147-0-6-4-0-6-6-5"
-       xlink:href="/dashboard/process/transit_docs/packing_lists"
+       xlink:href="/dashboard/process/transit-docs/packing-lists"
        style="display:inline;fill:#800000"
        transform="matrix(0.95385046,0,0,0.56419994,-69.470821,97.049241)">
       <rect
