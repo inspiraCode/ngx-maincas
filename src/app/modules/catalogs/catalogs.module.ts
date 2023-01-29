@@ -23,6 +23,10 @@ import { TariffSchedulesComponent } from './tariff-schedules/tariff-schedules.co
 import { DeleteTariffDialogComponent } from './tariff-schedules/delete-tariff-dialog/delete-tariff-dialog.component';
 import { EditTariffComponent } from './tariff-schedules/edit-tariff/edit-tariff.component';
 import { NewTariffComponent } from './tariff-schedules/new-tariff/new-tariff.component';
+import { MaterialsComponent } from './materials/materials.component';
+import { DeleteMaterialDialogComponent } from './materials/delete-material-dialog/delete-material-dialog.component';
+import { EditMaterialComponent } from './materials/edit-material/edit-material.component';
+import { NewMaterialComponent } from './materials/new-material/new-material.component';
 
 const routes: Routes = [
   {
@@ -65,6 +69,23 @@ const routes: Routes = [
             component: EditTariffComponent
           }
         ]
+      },
+      {
+        path: "materials",
+        children: [
+          {
+            path: "",
+            component: MaterialsComponent
+          },
+          {
+            path: "new",
+            component: NewMaterialComponent
+          },
+          {
+            path: "edit/:id",
+            component: EditMaterialComponent
+          }
+        ]
       }
     ]
   }
@@ -82,7 +103,11 @@ const routes: Routes = [
     TariffSchedulesComponent,
     DeleteTariffDialogComponent,
     EditTariffComponent,
-    NewTariffComponent
+    NewTariffComponent,
+    MaterialsComponent,
+    DeleteMaterialDialogComponent,
+    EditMaterialComponent,
+    NewMaterialComponent
   ],
   imports: [
     CommonModule,
