@@ -1,0 +1,51 @@
+<button mat-button routerLink="../../../">Tablero</button> > <button mat-button routerLink="../../">Catálogos</button> >
+<button mat-button routerLink="../">Fracciones Arancelarias</button> > <button mat-button>Modificar</button>
+<hr />
+<mat-card>
+  <mat-card-content>
+    <button mat-raised-button color="primary" routerLink="../../">
+      <mat-icon aria-hidden="false" aria-label="Regresar al menu de Fracciones" fontIcon="chevron_left"></mat-icon>
+      Regresar
+    </button>
+    <button (click)="addTariff()" mat-raised-button color="accent">
+      <mat-icon aria-hidden="false" aria-label="Guardar cambios" fontIcon="archive"></mat-icon>
+      Guardar
+    </button>
+  </mat-card-content>
+</mat-card>
+<br />
+<mat-card>
+  <mat-card-content>
+    <h1>Nueva Fracci&oacute;n Arancelaria</h1>
+    <br />
+    <form [formGroup]="tariffForm">
+      <mat-form-field class="half-width" style="width:30%">
+        <mat-label>Fracci&oacute;n Arancelaria</mat-label>
+        <input type="text" formControlName="code" matInput placeholder="Ex. 0901.21.0010">
+        <mat-hint>C&oacute;digo &uacute;nico de fracci&oacute;n</mat-hint>
+      </mat-form-field>
+      <mat-form-field style="margin-left:8px;width:40%">
+        <mat-label>UST</mat-label>
+        <mat-select formControlName="ust">
+          <mat-option *ngFor="let ust of ustList" [value]="ust">{{ust}}</mat-option>
+        </mat-select>
+        <mat-hint>Unidad Est&aacute;ndard</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Descripci&oacute;n del pa&iacute;s base</mat-label>
+        <input formControlName="baseDescription" type="text" matInput placeholder="Descripci&oacute;n del pa&iacute;s base">
+        <mat-hint>Descripci&oacute;n del pa&iacute;s base</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Descripci&oacute;n para documentar</mat-label>
+        <input formControlName="documentDescription" type="text" matInput placeholder="Descripci&oacute;n para documentar">
+        <mat-hint>Descripci&oacute;n para documentar</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Observaciones</mat-label>
+        <input formControlName="observations" type="text" matInput placeholder="Observaciones">
+        <mat-hint>Observaciones</mat-hint>
+      </mat-form-field>
+    </form>
+  </mat-card-content>
+</mat-card>

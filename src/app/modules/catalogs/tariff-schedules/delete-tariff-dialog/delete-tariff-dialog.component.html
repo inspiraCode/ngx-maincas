@@ -1,0 +1,18 @@
+<h2 mat-dialog-title>Borrar Fracci&oacute;n Arancelaria</h2>
+<mat-dialog-content class="mat-typography">
+  <h3>Para tomar en cuenta</h3>
+  <p>No se pueden borrar fracciones que se encuentran en uso.</p>
+
+  <h3>Confirmación</h3>
+  <p>Para borrar el registro deber&aacute; confirmar el nombre a continuación, y finalmente pulsar el botón de borrar abajo.</p>
+
+  <mat-form-field style="margin-left:8px;width:80%">
+    <mat-label>Nombre de la fracci&oacute;n arancelaria</mat-label>
+    <input [(ngModel)]="confirmText" type="text" matInput placeholder="Confirmar nombre" cdkFocusInitial />
+    <mat-hint>{{deleteRowTariffName}}</mat-hint>
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button color="warn" (click)="deleteRow()" [disabled]="confirmText!=deleteRowTariffName">Borrar</button>
+</mat-dialog-actions>

@@ -53,6 +53,7 @@ export class EditCompanyComponent {
             roles: [roles],
             block: [response.block]
           });
+          this.companyName = response.name;
         },
         error: (errData) => {
           console.error(errData);

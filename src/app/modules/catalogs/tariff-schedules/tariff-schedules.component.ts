@@ -6,16 +6,15 @@ import { MatTableDataSource } from '@angular/material/table';
 import { ApiService } from './services/api.service';
 
 import { NotificationService } from 'src/app/notification.service';
-import { DeleteCompanyDialogComponent } from './delete-company-dialog/delete-company-dialog.component';
-import { BlockCompanyDialogComponent } from './block-company-dialog/block-company-dialog.component';
+import { DeleteTariffDialogComponent } from './delete-tariff-dialog/delete-tariff-dialog.component';
 
 @Component({
-  selector: 'app-companies',
-  templateUrl: './companies.component.html',
-  styleUrls: ['./companies.component.sass']
+  selector: 'app-tariff-schedules',
+  templateUrl: './tariff-schedules.component.html',
+  styleUrls: ['./tariff-schedules.component.sass']
 })
-export class CompaniesComponent implements OnInit {
-  displayedColumns: string[] = ['actions', 'name', 'alias', 'addressCountry', 'addressState', 'addressCity', 'roles'];
+export class TariffSchedulesComponent implements OnInit {
+  displayedColumns: string[] = ['actions', 'code', 'ust', 'baseDescription'];
   dataSource!: MatTableDataSource<any>;
 
   @ViewChild(MatPaginator) paginator!: MatPaginator;
@@ -27,11 +26,11 @@ export class CompaniesComponent implements OnInit {
     public dialog: MatDialog) { }
 
   ngOnInit(): void {
-    this.getAllCompanies();
+    this.getTariffsReport();
   }
 
   openDeleteDialog(row: any) {
-    const dialogRef = this.dialog.open(DeleteCompanyDialogComponent, {
+    const dialogRef = this.dialog.open(DeleteTariffDialogComponent, {
       width: '30%',
       data: row
     });
@@ -39,35 +38,20 @@ export class CompaniesComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (!result) return;
       if (result.result === 'deleted') {
-        this.notifyService.showSuccess("Compañía borrada", "La compañía ha sido borrada con éxito.");
-        this.getAllCompanies();
+        this.notifyService.showSuccess("Fracci&oacute;n borrada", "La fracci&oacute;n ha sido borrada con éxito.");
+        this.getTariffsReport();
       } else {
-        this.notifyService.showError("Error técnico", "No se pudo borrar la compañía seleccionada");
+        this.notifyService.showError("Error técnico", "No se pudo borrar la fracci&oacute;n seleccionada");
       }
     });
   }
 
-  openBlockDialog(row: any) {
-    const dialogRef = this.dialog.open(BlockCompanyDialogComponent, {
-      width: '30%',
-      data: row
-    });
+  getTariffsReport() {
 
-    dialogRef.afterClosed().subscribe(result => {
-      if (!result) return;
-      if (result.result === 'blocked') {
-        this.notifyService.showSuccess("Bloque de Compañía", "La propiedad de bloqueo de la compañía ha sido modificado.");
-        this.getAllCompanies();
-      } else {
-        this.notifyService.showError("Error técnico", "No se pudo cambiar el bloqueo de la compañía, intente nuevamente.");
-      }
-    });
-  }
-
-  getAllCompanies() {
-    this.api.getCompany().subscribe({
+    this.api.getTariff().subscribe({
       next: (response) => {
-        this.paginator._intl.itemsPerPageLabel = "Compañías por página";
+        this.paginator._intl.itemsPerPageLabel = "Fracciones por página";
+        
         this.dataSource = new MatTableDataSource(response);
         this.dataSource.paginator = this.paginator;
         this.dataSource.sort = this.sort;

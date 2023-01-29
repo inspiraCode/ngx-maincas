@@ -155,6 +155,16 @@
       "id": 12
     }
   ],
+  "tariffs": [
+    {
+      "code": "3901.11.0123",
+      "ust": "Lbs",
+      "baseDescription": "Polimero para envolturas",
+      "documentDescription": "Polimero para envolturas",
+      "observations": "este es un ejemplo de fraccion arancelaria.",
+      "id": 1
+    }
+  ],
   "posts": [
     {
       "id": 1,

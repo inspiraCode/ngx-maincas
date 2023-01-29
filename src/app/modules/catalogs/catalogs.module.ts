@@ -19,6 +19,10 @@ import { EditCompanyComponent } from './companies/edit-company/edit-company.comp
 import { NewCompanyComponent } from './companies/new-company/new-company.component';
 import { HomeComponent } from './home/home.component';
 import { BlockCompanyDialogComponent } from './companies/block-company-dialog/block-company-dialog.component';
+import { TariffSchedulesComponent } from './tariff-schedules/tariff-schedules.component';
+import { DeleteTariffDialogComponent } from './tariff-schedules/delete-tariff-dialog/delete-tariff-dialog.component';
+import { EditTariffComponent } from './tariff-schedules/edit-tariff/edit-tariff.component';
+import { NewTariffComponent } from './tariff-schedules/new-tariff/new-tariff.component';
 
 const routes: Routes = [
   {
@@ -44,6 +48,23 @@ const routes: Routes = [
             component: EditCompanyComponent
           }
         ]
+      },
+      {
+        path: "tariffs",
+        children: [
+          {
+            path: "",
+            component: TariffSchedulesComponent
+          },
+          {
+            path: "new",
+            component: NewTariffComponent
+          },
+          {
+            path: "edit/:id",
+            component: EditTariffComponent
+          }
+        ]
       }
     ]
   }
@@ -57,7 +78,11 @@ const routes: Routes = [
     NewCompanyComponent,
     EditCompanyComponent,
     DeleteCompanyDialogComponent,
-    BlockCompanyDialogComponent
+    BlockCompanyDialogComponent,
+    TariffSchedulesComponent,
+    DeleteTariffDialogComponent,
+    EditTariffComponent,
+    NewTariffComponent
   ],
   imports: [
     CommonModule,

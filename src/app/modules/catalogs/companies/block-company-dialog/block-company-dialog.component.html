@@ -14,5 +14,6 @@
 </mat-dialog-content>
 <mat-dialog-actions align="end">
   <button mat-button mat-dialog-close>Cancelar</button>
-  <button mat-button color="accent" (click)="blockRow()" [disabled]="confirmText!=rowCompanyName">Cambiar Bloqueo</button>
+  <button *ngIf="companyBlocked" (click)="blockRow()" mat-icon-button color="accent" [disabled]="confirmText!=rowCompanyName">Desbloquear</button>
+  <button *ngIf="!companyBlocked" (click)="blockRow()" mat-icon-button color="accent" [disabled]="confirmText!=rowCompanyName">Bloquear</button>
 </mat-dialog-actions>

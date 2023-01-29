@@ -10,6 +10,7 @@ import { ApiService } from '../services/api.service';
 export class BlockCompanyDialogComponent implements OnInit {
   confirmText = "";
   rowCompanyName = "";
+  companyBlocked = false;
   constructor(
     @Inject(MAT_DIALOG_DATA) public company: any,
     private dialogRef: MatDialogRef<BlockCompanyDialogComponent>,
@@ -17,6 +18,7 @@ export class BlockCompanyDialogComponent implements OnInit {
 
   ngOnInit(): void {
     this.rowCompanyName = this.company.name;
+    this.companyBlocked = this.company.block;
   }
 
   blockRow() {
