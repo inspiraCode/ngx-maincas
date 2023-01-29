@@ -11,7 +11,7 @@ import { ApiService } from '../services/api.service';
 })
 export class NewCompanyComponent {
   companyForm !: FormGroup;
-  rolesList: string[] = ['AUDITOR', 'BROKER', 'CARRIER', 'CONSIGNEE', 'CONSULTANT', 'CUSTOMER', 'PAYER', 'SHIPPER'];
+  rolesList: string[] = ['AUDITOR', 'BROKER', 'BUYER', 'CARRIER', 'CONSIGNEE', 'CONSULTANT', 'CUSTOMER', 'PAYER', 'SELLER', 'SHIPPER'];
 
   constructor(
     private formBuilder: FormBuilder,

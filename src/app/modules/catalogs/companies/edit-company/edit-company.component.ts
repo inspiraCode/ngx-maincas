@@ -12,7 +12,7 @@ import { ApiService } from '../services/api.service';
 export class EditCompanyComponent {
   companyForm !: FormGroup;
   companyName = '';
-  rolesList: string[] = ['AUDITOR', 'BROKER', 'CARRIER', 'CONSIGNEE', 'CONSULTANT', 'CUSTOMER', 'PAYER', 'SHIPPER'];
+  rolesList: string[] = ['AUDITOR', 'BROKER', 'BUYER', 'CARRIER', 'CONSIGNEE', 'CONSULTANT', 'CUSTOMER', 'PAYER', 'SELLER', 'SHIPPER'];
 
   constructor(
     private formBuilder: FormBuilder,
