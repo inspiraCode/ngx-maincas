@@ -1,0 +1,24 @@
+<button mat-button routerLink="../../../">Tablero</button> > <button mat-button routerLink="../../">Proceso</button> >
+<button mat-button routerLink="../">Ordenes de trabajo y recolección</button> > <button mat-button>Nuevo</button>
+<hr />
+<mat-card>
+  <mat-card-content>
+    <button mat-raised-button color="primary" routerLink="../">
+      <mat-icon aria-hidden="false" aria-label="Regresar al menu de Ordenes de trabajo y recolección" fontIcon="chevron_left"></mat-icon>
+      Regresar
+    </button>
+    <button (click)="addWorkOrder()" mat-raised-button color="accent">
+      <mat-icon aria-hidden="false" aria-label="Guardar cambios" fontIcon="archive"></mat-icon>
+      Guardar
+    </button>
+  </mat-card-content>
+</mat-card>
+<br />
+<mat-card>
+  <mat-card-content>
+    <h1>Nueva &oacute;rden de trabajo</h1>
+    <br />
+    <form [formGroup]="workOrderForm">
+    </form>
+  </mat-card-content>
+</mat-card>
