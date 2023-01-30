@@ -4,24 +4,21 @@
       <button mat-icon-button class="example-icon" (click)="drawer.toggle()" aria-label="icon-button with menu icon">
         <mat-icon>menu</mat-icon>
       </button>
-      <span>maincas</span>
+      <span>MAINCAS</span>
     </div>
-    <div>
+    <div style="text-align: right;">
+      <span>nombre de usuario</span>
       <button style="float: right;" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-icon>more_vert</mat-icon>
       </button>
       <mat-menu #menu="matMenu">
-        <button mat-menu-item>
-          <mat-icon>dialpad</mat-icon>
-          <span>Redial</span>
-        </button>
         <button mat-menu-item disabled>
-          <mat-icon>voicemail</mat-icon>
-          <span>Check voice mail</span>
+          <mat-icon>person</mat-icon>
+          <span>Perfil</span>
         </button>
-        <button mat-menu-item>
-          <mat-icon>notifications_off</mat-icon>
-          <span>Disable alerts</span>
+        <button mat-menu-item routerLink="/">
+          <mat-icon>logout</mat-icon>
+          <span>Salir</span>
         </button>
       </mat-menu>
     </div>
