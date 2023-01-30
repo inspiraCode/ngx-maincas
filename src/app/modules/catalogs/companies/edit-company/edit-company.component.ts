@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NotificationService } from 'src/app/notification.service';
@@ -9,7 +9,7 @@ import { ApiService } from '../services/api.service';
   templateUrl: './edit-company.component.html',
   styleUrls: ['./edit-company.component.sass']
 })
-export class EditCompanyComponent {
+export class EditCompanyComponent implements OnInit {
   companyForm !: FormGroup;
   companyName = '';
   rolesList: string[] = ['AUDITOR', 'BROKER', 'BUYER', 'CARRIER', 'CONSIGNEE', 'CONSULTANT', 'CUSTOMER', 'PAYER', 'SELLER', 'SHIPPER'];

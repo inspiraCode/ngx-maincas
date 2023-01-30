@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { NotificationService } from 'src/app/notification.service';
@@ -9,7 +9,7 @@ import { ApiService } from '../services/api.service';
   templateUrl: './new-company.component.html',
   styleUrls: ['./new-company.component.sass']
 })
-export class NewCompanyComponent {
+export class NewCompanyComponent implements OnInit {
   companyForm !: FormGroup;
   rolesList: string[] = ['AUDITOR', 'BROKER', 'BUYER', 'CARRIER', 'CONSIGNEE', 'CONSULTANT', 'CUSTOMER', 'PAYER', 'SELLER', 'SHIPPER'];
 
