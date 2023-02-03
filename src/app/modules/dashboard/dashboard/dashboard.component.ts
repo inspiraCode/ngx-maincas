@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+import { Component, Inject } from '@angular/core';
+import { AuthService } from '@auth0/auth0-angular';
 
 @Component({
   selector: 'app-dashboard',
@@ -6,5 +8,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./dashboard.component.sass']
 })
 export class DashboardComponent {
-
+  constructor(@Inject(DOCUMENT) public document: Document, public auth: AuthService) { }
 }

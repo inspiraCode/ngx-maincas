@@ -16,7 +16,7 @@
           <mat-icon>person</mat-icon>
           <span>Perfil</span>
         </button>
-        <button mat-menu-item routerLink="/">
+        <button mat-menu-item (click)="auth.logout({ logoutParams: { returnTo: document.location.origin } })">
           <mat-icon>logout</mat-icon>
           <span>Salir</span>
         </button>

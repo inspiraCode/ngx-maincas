@@ -3,8 +3,7 @@
 <div class="bg-text">
   <h1>MAINCAS</h1>
   <p>Manejo Inteligente a Cadena de Suministro</p>
-  <button mat-flat-button routerLink="/dashboard">
+  <button mat-flat-button (click)="auth.loginWithRedirect({appState: {target: '/dashboard'}})">
     Ingresar
   </button>
 </div>
-

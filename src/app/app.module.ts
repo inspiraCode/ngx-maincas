@@ -14,6 +14,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
+import { AuthModule } from '@auth0/auth0-angular';
+import { environment as env } from '../environments/environment';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +24,9 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
   ],
   imports: [
     BrowserModule,
+    AuthModule.forRoot({
+      ...env.auth0
+    }),
     AppRoutingModule,
     BrowserAnimationsModule,
     LayoutModule,

@@ -14,14 +14,14 @@ const routes: Routes = [
 ]
 
 @NgModule({
-  declarations: [
-    HomepageComponent
-  ],
-  imports: [
-    CommonModule,
-    RouterModule.forChild(routes),
-    MatSidenavModule,
-    MatButtonModule
-  ]
+    declarations: [
+        HomepageComponent
+    ],
+    imports: [
+        CommonModule,
+        RouterModule.forChild(routes),
+        MatSidenavModule,
+        MatButtonModule
+    ]
 })
 export class PublicModule { }

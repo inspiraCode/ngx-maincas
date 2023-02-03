@@ -12,10 +12,17 @@ const setEnv = () => {
 // `environment.ts` file structure
   const envConfigFile = `export const environment = {
   googleApiKey: '${process.env["GOOGLE_API_KEY"]}',
-  auth0ClientId: '${process.env["AUTH0_CLIENT_ID"]}',
   apiUrl : '${process.env["API_URL"]}'
   appVersion: '${appVersion}',
   production: true,
+  auth0: {
+    domain: '${process.env['AUTH0_DOMAIN']}',
+    clientId: '${process.env['AUTH0_CLIENT_ID']}',
+    redirect_uri: '${process.env['AUTH0_CALLBACK_URL']}',
+    authorizationParams: {
+      redirect_uri: '${process.env['AUTH0_CALLBACK_URL']}',
+    },
+  },
 };
 `;
   console.log(colors.magenta('The file `environment.ts` will be written with the following content: \n'));
