@@ -12,12 +12,12 @@ export class ApiService {
 
   postCompany(data: any) {
     data.roles = data.roles.toString();
-    return this.http.post<any>(this.baseUrl + "/companies/", data);
+    return this.http.post<any>(this.baseUrl + "/api/company/create", data);
   }
 
   updateCompany(id: Number, data: any) {
     data.roles = data.roles.toString();
-    return this.http.put<any>(this.baseUrl + "/companies/" + id, data);
+    return this.http.put<any>(this.baseUrl + "/api/company/" + id, data);
   }
 
   getCompany() {
@@ -25,10 +25,10 @@ export class ApiService {
   }
 
   getCompanyById(id: Number) {
-    return this.http.get<any>(this.baseUrl + "/companies/" + id);
+    return this.http.get<any>(this.baseUrl + "/api/company/" + id);
   }
 
   deleteCompanyById(id: Number) {
-    return this.http.delete<any>(this.baseUrl + "/companies/" + id);
+    return this.http.delete<any>(this.baseUrl + "/api/company/" + id);
   }
 }
