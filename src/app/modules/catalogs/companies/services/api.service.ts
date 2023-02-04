@@ -21,7 +21,7 @@ export class ApiService {
   }
 
   getCompany() {
-    return this.http.get<any>(this.baseUrl + "/companies/");
+    return this.http.get<any>(this.baseUrl + "/api/company/list");
   }
 
   getCompanyById(id: Number) {
