@@ -28,6 +28,14 @@ export class ApiService {
     return this.http.get<any>(this.baseUrl + "/api/company/" + id);
   }
 
+  getBuyer() {
+    return this.http.get<any>(this.baseUrl + "/api/company/roles/buyer");
+  }
+
+  getSeller() {
+    return this.http.get<any>(this.baseUrl + "/api/company/roles/seller");
+  }
+
   deleteCompanyById(id: Number) {
     return this.http.delete<any>(this.baseUrl + "/api/company/" + id);
   }

@@ -1,1 +1,88 @@
-<p>new-material works!</p>
+<button mat-button routerLink="../../../">Tablero</button> > <button mat-button routerLink="../../">Catálogos</button> >
+<button mat-button routerLink="../">Materiales</button> > <button mat-button>Nuevo</button>
+<hr />
+<mat-card>
+  <mat-card-content>
+    <button mat-raised-button color="primary" routerLink="../">
+      <mat-icon aria-hidden="false" aria-label="Regresar al menu de Materiales" fontIcon="chevron_left"></mat-icon>
+      Regresar
+    </button>
+    <button (click)="addMaterial()" mat-raised-button color="accent">
+      <mat-icon aria-hidden="false" aria-label="Guardar cambios" fontIcon="archive"></mat-icon>
+      Guardar
+    </button>
+  </mat-card-content>
+</mat-card>
+<br />
+<mat-card>
+  <mat-card-content>
+    <h1>Nuevo Material</h1>
+    <br />
+    <form [formGroup]="materialForm">
+      <mat-form-field class="half-width" style="width:43%" appearance="fill">
+        <mat-label>Vendedor</mat-label>
+        <input type="text" matInput formControlName="seller" [matAutocomplete]="acSeller" />
+        <mat-autocomplete #acSeller="matAutocomplete" [displayWith]="displayCompany">
+          <mat-option *ngFor="let seller of filteredSellers | async" [value]="seller">{{seller.alias}}</mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <button mat-icon-button>
+        <mat-icon aria-hidden="false" aria-label="Agregar Vendedor" fontIcon="launch"></mat-icon>
+      </button>
+      <mat-form-field class="half-width" style="width:43%" appearance="fill">
+        <mat-label>Comprador</mat-label>
+        <input type="text" matInput formControlName="buyer" [matAutocomplete]="acBuyer" />
+        <mat-autocomplete #acBuyer="matAutocomplete" [displayWith]="displayCompany">
+          <mat-option *ngFor="let buyer of filteredBuyers | async" [value]="buyer">{{buyer.alias}}</mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <button mat-icon-button>
+        <mat-icon aria-hidden="false" aria-label="Agregar Comprador" fontIcon="launch"></mat-icon>
+      </button>
+      <mat-form-field class="full-width">
+        <mat-label>Descripci&oacute;n Legal</mat-label>
+        <input type="text" formControlName="legalDescription" matInput
+          placeholder="Ex. Válvula de purga para compresor, se presenta desarmada" />
+        <mat-hint>Descripci&oacute; legal del material</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Descripci&oacute;n Comercial</mat-label>
+        <input type="text" formControlName="commercialDescription" matInput placeholder="Ex. KT,VALVE,BLOWDOWN" />
+        <mat-hint>Descripci&oacute; comercial del material</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="full-width">
+        <mat-label>Descripci&oacute;n para SED</mat-label>
+        <input type="text" formControlName="sedDescription" matInput placeholder="Ex. KT,VALVE,BLOWDOWN" />
+        <mat-hint>Descripci&oacute; del material para SED</mat-hint>
+      </mat-form-field>
+      <mat-form-field class="half-width" style="width:43%" appearance="fill">
+        <mat-label>Fracci&oacute;n Arancelaria</mat-label>
+        <input type="text" matInput formControlName="tariffSchedule" [matAutocomplete]="acTariff" />
+        <mat-autocomplete #acTariff="matAutocomplete" [displayWith]="displayTariff">
+          <mat-option *ngFor="let tariff of filteredTariffs | async" [value]="tariff">{{tariff.code}}|{{tariff.baseDescription}}</mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <button mat-icon-button>
+        <mat-icon aria-hidden="false" aria-label="Agregar Fracci&oacute;n Arancelaria" fontIcon="launch"></mat-icon>
+      </button>
+      <mat-form-field class="half-width" style="width:43%" appearance="fill">
+        <mat-label>Fracci&oacute;n para SED</mat-label>
+        <input type="text" matInput formControlName="sedTariffSchedule" [matAutocomplete]="acSedTariff" />
+        <mat-autocomplete #acSedTariff="matAutocomplete" [displayWith]="displayTariff">
+          <mat-option *ngFor="let tariff of filteredSedTariffs | async" [value]="tariff">{{tariff.code}}|{{tariff.baseDescription}}</mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+      <button mat-icon-button>
+        <mat-icon aria-hidden="false" aria-label="Agregar Fracci&oacute;n Arancelaria" fontIcon="launch"></mat-icon>
+      </button>
+      <mat-form-field class="half-width">
+        <mat-label>Observaciones</mat-label>
+        <input type="text" formControlName="observations" matInput placeholder="Observaciones" />
+        <mat-hint>Observaciones</mat-hint>
+      </mat-form-field>
+      <section class="checkbox-section">
+        <mat-checkbox formControlName="approvedImport" color="warn">Importaci&oacute;n Aprovada</mat-checkbox>
+      </section>
+    </form>
+  </mat-card-content>
+</mat-card>
