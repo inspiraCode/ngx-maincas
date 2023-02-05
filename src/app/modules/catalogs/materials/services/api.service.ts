@@ -11,12 +11,10 @@ export class ApiService {
   constructor(private http: HttpClient) { }
 
   postMaterial(data: any) {
-    data.roles = data.roles.toString();
     return this.http.post<any>(this.baseUrl + "/api/material/create", data);
   }
 
   updateMaterial(id: Number, data: any) {
-    data.roles = data.roles.toString();
     return this.http.put<any>(this.baseUrl + "/api/material/" + id, data);
   }
 

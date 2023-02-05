@@ -93,7 +93,21 @@ export class NewMaterialComponent implements OnInit {
   }
 
   addMaterial() {
-    throw new Error("Add Material method not implemented yet");
+    if (this.materialForm.valid) {
+      this.api.postMaterial(this.materialForm.value).subscribe({
+        next: response => {
+          this.notifyService.showSuccess("Material Agregado", "El material " + response.commercialDescription + " ha sido agregado con éxito, sele ha asignado el identificador [" + response.id + "]");
+          this.router.navigateByUrl('/dashboard/catalogs/materials/edit/' + response.id);
+        },
+        error: errData => {
+          console.error(errData);
+          this.notifyService.showError("Error Técnico", "Error técnico al cargar datos, intente de nuevo");
+        }
+      });
+    } else {
+      this.notifyService.showWarning("Validación", "Los datos ingresados no son válidos para el sistema");
+      console.error("Not a valid form");
+    }
   }
 
   displayCompany(company: any): string {
