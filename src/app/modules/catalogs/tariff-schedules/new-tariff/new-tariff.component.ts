@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NotificationService } from 'src/app/notification.service';
@@ -9,14 +9,13 @@ import { ApiService } from '../services/api.service';
   templateUrl: './new-tariff.component.html',
   styleUrls: ['./new-tariff.component.sass']
 })
-export class NewTariffComponent {
+export class NewTariffComponent implements OnInit {
   tariffForm !: FormGroup;
   tariffName = '';
   ustList: string[] = ["Kg", "Lbs"];
 
   constructor(
     private formBuilder: FormBuilder,
-    private route: ActivatedRoute,
     private router: Router,
     private api: ApiService,
     private notifyService: NotificationService) { }
@@ -36,7 +35,7 @@ export class NewTariffComponent {
       this.api.postTariff(this.tariffForm.value)
         .subscribe({
           next: (res) => {
-            this.notifyService.showSuccess("Fracci&oacute;n Actualizada", "Los datos de la fracci&oacute; han sido actualizados con éxito");
+            this.notifyService.showSuccess("Fracción Actualizada", "Los datos de la fracci&oacute; han sido actualizados con éxito");
             this.router.navigateByUrl('/dashboard/catalogs/tariffs');
           },
           error: (errData) => {

@@ -54,7 +54,7 @@ export class EditTariffComponent {
       this.api.updateTariff(Number(this.route.snapshot.paramMap.get('id')), this.tariffForm.value)
         .subscribe({
           next: (res) => {
-            this.notifyService.showSuccess("Fracci&oacute;n Actualizada", "Los datos de la fracci&oacute; han sido actualizados con éxito");
+            this.notifyService.showSuccess("Fracción Actualizada", "Los datos de la fracci&oacute; han sido actualizados con éxito");
             this.router.navigateByUrl('/dashboard/catalogs/tariffs');
           },
           error: (errData) => {
