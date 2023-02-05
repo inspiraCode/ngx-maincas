@@ -56,7 +56,7 @@ export class CompaniesComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (!result) return;
       if (result.result === 'blocked') {
-        this.notifyService.showSuccess("Bloque de Compañía", "La propiedad de bloqueo de la compañía ha sido modificado.");
+        this.notifyService.showSuccess("Bloqueo de Compañía", "La propiedad de bloqueo de la compañía ha sido modificado.");
         this.getAllCompanies();
       } else {
         this.notifyService.showError("Error técnico", "No se pudo cambiar el bloqueo de la compañía, intente nuevamente.");
