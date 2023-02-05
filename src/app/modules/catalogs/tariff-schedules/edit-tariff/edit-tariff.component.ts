@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { NotificationService } from 'src/app/notification.service';
@@ -9,7 +9,7 @@ import { ApiService } from '../services/api.service';
   templateUrl: './edit-tariff.component.html',
   styleUrls: ['./edit-tariff.component.sass']
 })
-export class EditTariffComponent {
+export class EditTariffComponent implements OnInit {
   tariffForm !: FormGroup;
   tariffName = '';
   ustList: string[] = ["Kg", "Lbs"];
