@@ -106,21 +106,25 @@ export class NewMaterialComponent implements OnInit {
 
   private _filterSeller(val: string): Observable<any> {
     return this.companyApi.getSeller().pipe(
-      map(data => data.filter((company: Company) => { return company.alias.toLowerCase().indexOf(val?.toLowerCase()) === 0 }))
+      map(data => data.filter((company: Company) => {
+        return company.alias.toLowerCase().includes(val?.toLowerCase());
+      }))
     );
   }
 
   private _filterBuyer(val: string): Observable<any> {
     return this.companyApi.getBuyer().pipe(
-      map(data => data.filter((company: Company) => { return company.alias.toLowerCase().indexOf(val?.toLowerCase()) === 0 }))
+      map(data => data.filter((company: Company) => {
+        return company.alias.toLowerCase().includes(val?.toLowerCase());
+      }))
     );
   }
 
   private _filterTariffSchedule(val: string): Observable<any> {
     return this.tariffApi.getTariff().pipe(
       map(data => data.filter((tariff: TariffSchedule) => {
-        return tariff.code.toLowerCase().indexOf(val?.toLowerCase()) === 0
-          || tariff.baseDescription.toLowerCase().indexOf(val?.toLowerCase()) === 0;
+        return tariff.code.toLowerCase().includes(val?.toLowerCase())
+          || tariff.baseDescription.toLowerCase().includes(val?.toLowerCase());
       }))
     );
   }
