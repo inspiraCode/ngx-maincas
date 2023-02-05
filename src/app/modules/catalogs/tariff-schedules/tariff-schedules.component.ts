@@ -38,10 +38,10 @@ export class TariffSchedulesComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (!result) return;
       if (result.result === 'deleted') {
-        this.notifyService.showSuccess("Fracci&oacute;n borrada", "La fracci&oacute;n ha sido borrada con éxito.");
+        this.notifyService.showSuccess("Fracción borrada", "La fracción ha sido borrada con éxito.");
         this.getTariffsReport();
       } else {
-        this.notifyService.showError("Error técnico", "No se pudo borrar la fracci&oacute;n seleccionada");
+        this.notifyService.showError("Error técnico", "No se pudo borrar la fracción seleccionada");
       }
     });
   }
