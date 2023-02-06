@@ -107,7 +107,22 @@ export class EditMaterialComponent implements OnInit {
   }
 
   saveMaterial(): void {
-    throw new Error('Method not implemented.');
+    if (this.materialForm.valid) {
+      this.api.updateMaterial(Number(this.route.snapshot.paramMap.get('id')), this.materialForm.value)
+        .subscribe({
+          next: (res) => {
+            this.notifyService.showSuccess("Registro de Material Actualizado", "Los datos del material han sido actualizados con éxito");
+            this.router.navigateByUrl('/dashboard/catalogs/materials');
+          },
+          error: (errData) => {
+            console.error(errData);
+            this.notifyService.showError("Error Técnico", "Error técnico al cargar datos, intente de nuevo");
+          }
+        });
+    } else {
+      this.notifyService.showWarning("Validación", "Los datos ingresados no son válidos para el sistema");
+      console.error("Not a valid form");
+    }
   }
 
   displayCompany(company: any): string {
