@@ -45,7 +45,7 @@ export class NewMaterialComponent implements OnInit {
     this.materialForm = this.formBuilder.group({
       seller: ['', Validators.required],
       buyer: ['', Validators.required],
-      approvedImport: [true],
+      approvedImpo: [true],
       legalDescription: ['', Validators.required],
       commercialDescription: ['', Validators.required],
       sedDescription: ['', Validators.required],
