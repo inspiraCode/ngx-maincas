@@ -13,7 +13,9 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSortModule } from '@angular/material/sort';
 import { MatTableModule } from '@angular/material/table';
+import { MatTabsModule } from '@angular/material/tabs';
 import { RouterModule, Routes } from '@angular/router';
+
 import { BlockCompanyDialogComponent } from './companies/block-company-dialog/block-company-dialog.component';
 import { CompaniesComponent } from './companies/companies.component';
 import { DeleteCompanyDialogComponent } from './companies/delete-company-dialog/delete-company-dialog.component';
@@ -126,7 +128,8 @@ const routes: Routes = [
     MatSelectModule,
     MatCheckboxModule,
     MatDialogModule,
-    MatAutocompleteModule
+    MatAutocompleteModule,
+    MatTabsModule
   ]
 })
 export class CatalogsModule { }

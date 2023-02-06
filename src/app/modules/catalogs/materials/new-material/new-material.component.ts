@@ -4,21 +4,11 @@ import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { debounceTime, distinctUntilChanged, map, startWith, switchMap } from 'rxjs/operators';
 import { NotificationService } from 'src/app/notification.service';
+import { Company } from '../../companies/model/company.model';
 import { ApiService as CompanyApiService } from '../../companies/services/api.service';
+import { TariffSchedule } from '../../tariff-schedules/model/tariff.model';
 import { ApiService as TariffApiService } from '../../tariff-schedules/services/api.service';
 import { ApiService } from '../services/api.service';
-
-export interface Company {
-  id: number,
-  alias: string,
-  name: string
-}
-
-export interface TariffSchedule {
-  id: number,
-  code: string,
-  baseDescription: string
-}
 
 @Component({
   selector: 'app-new-material',
