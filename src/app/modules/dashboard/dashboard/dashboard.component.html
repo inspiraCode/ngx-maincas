@@ -11,8 +11,8 @@
         [src]="user.picture"
         alt="User's profile picture"
         class="profile-image clip-circle"
+        onError="this.src='/assets/images/user.png'"
       />
-      <span *ngIf="auth.user$ | async as user">{{ user.name }}</span>
       <button style="float: right;" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
         <mat-icon>more_vert</mat-icon>
       </button>
